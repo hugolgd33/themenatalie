@@ -20,7 +20,6 @@ Text Domain: motaphoto
 body{
     margin: 0px;
     box-sizing: border-box;
-
 }
 
 a, ul{
@@ -214,3 +213,112 @@ overflow-y:hidden!important;
         flex-direction: column;
     }
   }
+
+  /*ANIMATION ICON BURGER*/
+  .banner{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+.banner h1{
+    font-size: 5vw;
+    font-family: 'Space Mono', monospace;
+    font-style: italic;
+    color: transparent;
+    text-transform: uppercase;
+    -webkit-text-stroke: 4px #fff;
+}
+.banner img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+ /*IMG CARD BLOCK*/
+ .container-general{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+ }
+ .portfolio-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+ }
+ .block-photo{
+    display: flex;
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+ }
+ .block-photo .photo-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+ }
+
+ .block-photo .overlay{
+    position: absolute;
+    background-color:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .block-photo .overlay .lien{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;  
+}
+.block-photo .overlay .photo-category{
+    color: #fff;
+}
+.block-photo .overlay .photo-reference{
+    position:absolute;
+    left:5px;
+    z-index: 2;
+    color:#fff;
+    bottom:5px;
+}
+.block-photo .overlay .photo-category{
+    position:absolute;
+    right:5px;
+    z-index: 2;
+    bottom:5px;
+}
+.block-photo .overlay .photo-category a{
+    color:#fff;
+    font-weight: 400;
+    font-size: 15px;
+}
+.block-photo:hover .overlay{
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+.block-photo .overlay img{
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

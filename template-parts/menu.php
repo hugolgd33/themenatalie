@@ -3,9 +3,8 @@
         <div class="left"><a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/Logo.png" alt="logo"></a></div>
         <div class="right">
             <ul>
-                <li><a href="<?php echo get_site_url(); ?>">Accueil</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/apropos">À propos</a></li>
-                <li><button onclick="Popup()">Contact</button></li>
+                <?php wp_nav_menu(array('container'  => 'false', 'items_wrap' => '%3$s','theme_location' => 'header',)); ?>
+                <li><a onclick="Popup()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -18,8 +17,7 @@
         </button>
         <section id="menu-container" class="close">
             <ul id="menu">
-                <li class="navigation"><a>Accueil</a></li>
-                <li class="navigation"><a>À propos</a></li>
+                <?php wp_nav_menu(array('container'  => 'false', 'items_wrap' => '%3$s','theme_location' => 'header',)); ?>
                 <li class="navigation"><a onclick="Popup()">Contact</a></li>
             </ul>
         </section>
