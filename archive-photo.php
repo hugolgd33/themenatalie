@@ -12,12 +12,14 @@ Template Name: Photo
 <section class="container-general">
     <main class="archive__body">
 
-    <!--début : création des filtres pour la page archive-->
+    <!--Filtres formulaire html -->
             <form class="archive__body__filtres" method="POST">
-
-                <select class="select_categorie" name="categorie-photo" id="categorie-photo">
+                <?php $name=''; ?>
+                <select class="select_categorie" name="blabla" id="categorie-photo">
                 <option selected value="0">Catégorie</option>
-                <?php $terms = get_terms('categorie-photo');
+                <?php $terms = get_terms(array(
+            'taxonomy' => 'categorie-photo',
+          ));
                 foreach($terms as $term){ ?>
                 <option value="<?php echo $term->slug ?>"><?php echo $term->slug ?></option>
 
@@ -28,20 +30,23 @@ Template Name: Photo
                 <input type="submit"></input>
             </form>
 
-
+  <!--Filtres conditions -->
         <?php 
             $filtres = array( 'post_type' => 'photo', 'posts_per_page' => 12, 'paged' => $paged);
-
-            if (isset ($_POST ['categorie-photo']) && ($_GET ['categorie-photo']) != "0")
+            
+            if (isset ($_POST ['blabla']) && ($_GET ['blabla']) != "0")
             {
-                $filtres ['categorie-photo']=$_GET['categorie-photo'];
+                $filtres ['blabla']=$_GET['blabla'];
+                echo ('balbalba');
+               
             }
+
             $reponse = new WP_Query( $filtres );
         ?>
 
 
         <div class="portfolio-container">
-
+<!-- Photos qui correspondent au filtre-->
             <?php while ( $reponse->have_posts() ) : $reponse->the_post(); 
             
              $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large');

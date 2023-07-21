@@ -111,7 +111,7 @@ jQuery(document).ready(function($) {
 			
 		</div>
 	</div>
-	<a class="post-contact-btn" href="<?php echo get_home_url(); ?>" >Voir toutes les photos</a>
+	<a class="post-contact-btn post-btn-bottom" href="<?php echo get_home_url(); ?>" >Voir toutes les photos</a>
 </article>
 
 
