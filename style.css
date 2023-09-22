@@ -322,3 +322,125 @@ overflow-y:hidden!important;
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+form{
+    width: 100%;
+    height: 70px;
+    padding-bottom: 20px;
+}
+select, option,label{
+    width: 150px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(33% - 50px));
+    grid-gap: 50px;
+    justify-content: space-between;
+  }
+  
+  
+  .home-card{
+    padding: 20px;
+    background: #fff;
+  }
+  
+.photo-visualisation{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #000;
+    z-index: 1000;
+}
+.photo-visualisation i{
+    color: #fff;
+}
+.lb-data .lb-details {
+    width: 100%!important;
+}
+.lb-data .lb-caption {
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.lb-data .lb-caption .ref {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.lb-data .lb-caption .cat {
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.lightbox .lb-image{
+    border-radius: 0px!important;
+    border: 0px!important;
+    
+}
+body .lb-nav a.lb-prev , body .lb-nav a.lb-next {
+    width:200px;
+    background-image: url(./images/assets/prev.png)!important;
+    background-size: contain;
+    left: -10vw;
+    float: left;
+    height: 25px;
+    top: 50%;
+    position: absolute;
+    opacity: 1;
+}
+body .lb-nav a.lb-prev:hover {
+    background-image: url(./images/assets/prevhover.png)!important;
+  
+}
+
+
+body div .lb-nav a.lb-next{
+    background-image: url(./images/assets/next.png)!important;
+    right: -10vw;
+    left:auto;
+}
+body div .lb-nav a.lb-next:hover{
+    background-image: url(./images/assets/nexthover.png)!important;
+}
+
+body .lb-data .lb-close{
+    position: absolute;
+    top: 20px;
+    width: 25px;
+    opacity: 1; 
+    right: 20vw;
+    background-size: contain;
+    background-image: url(./images/assets/close.png);
+}
+
+.div-btn-load{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 150px;
+}
+#load-more-posts{
+    width: 250px;
+    background-color: #D8D8D8;
+    color: #000;
+    font-size: 12px;
+    height: 60px;
+    border: 0px;
+}
+#load-more-posts:hover{
+    background-color: #000;
+    color: #fff;
+}

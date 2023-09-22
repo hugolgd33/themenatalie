@@ -91,17 +91,21 @@ jQuery(document).ready(function($) {
                         $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large');
                         
                         $nmb_post = $nmb_post + 1;
-                        echo '<div class="block-photo">';
-                        echo '<img class="photo-img" src="'.$image[0].'"/>';
-                        echo '<div class="overlay">'; ?>
-						<a class="lien" href="<?php the_permalink(); ?>"> </a><?php
-                          echo'<img src="'. get_template_directory_uri().'/images/Icon_eye.png" alt="">';
-                          echo'<button class="photo-visualisation"></button>'; ?>
-                          <p class="photo-reference"><?php the_field( 'reference' ); ?></p> <?php
-						  echo'<h4 class="photo-category">'. $categorie_post_nom .'</h4>';
-						 
-                        echo'</div>';
-                        echo'</div>';
+					?>
+					<div class="block-photo">
+						<img class="photo-img" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+						<div class="overlay">
+							<a class="photo-visualisation" href="<?php echo $image[0]; ?>" data-lightbox="photos" title="<span class='ref'><?php the_field('reference'); ?></span> <span class='cat'><?php echo wp_get_post_terms( $current_post->ID, 'categorie-photo')[0]->name; ?></span>">
+								<i class="fas fa-expand"></i> <!-- Icône de plein écran -->
+							</a>
+							<a class="lien" href="<?php the_permalink(); ?>"></a>
+							<img src="<?php echo get_template_directory_uri(); ?>/images/Icon_eye.png" alt="">
+							<p class="photo-reference"><?php the_field( 'reference' ); ?></p>
+							<h4 class="photo-category"><?php echo wp_get_post_terms( $current_post->ID, 'categorie-photo')[0]->name; ?></h4>
+						
+						</div>
+					</div>
+					<?php
 					};
                     
                 endwhile; 
@@ -111,7 +115,7 @@ jQuery(document).ready(function($) {
 			
 		</div>
 	</div>
-	<a class="post-contact-btn post-btn-bottom" href="<?php echo get_home_url(); ?>" >Voir toutes les photos</a>
+	<a class="post-contact-btn post-btn-bottom" href="<?php echo get_home_url(); ?>/photo/" >Voir toutes les photos</a>
 </article>
 
 

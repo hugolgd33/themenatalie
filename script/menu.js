@@ -35,3 +35,4 @@ function popupClose(){
     const contactPopup =document.getElementById('popupContact');
     contactPopup.classList.add('hidden');
 }
+
