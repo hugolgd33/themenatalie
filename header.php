@@ -6,7 +6,6 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <!--  <script src=" echo get_template_directory_uri(); /script/menu.js"></script>-->
         <title>Nathalie Moka</title>
         <?php wp_head() ?>
     </head>

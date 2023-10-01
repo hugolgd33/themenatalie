@@ -41,6 +41,7 @@ jQuery(document).ready(function($) {
     $('#load-more-posts').click(function() {
         var button = $(this),
             page = button.data('page');
+        var divbtn = $(".div-btn-load");
 
         $.ajax({
             url: ajaxfiltre.ajax_url,
@@ -61,7 +62,7 @@ jQuery(document).ready(function($) {
                 // Vérifiez la présence de .block-photo
                 if(blockPhotos.length < postsPerPage) {
                     // Si le nombre de posts retournés est inférieur à postsPerPage
-                    button.hide();
+                    divbtn.hide();
                 } 
                 
                 $('#contain-photo').append(response);

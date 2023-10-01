@@ -17,7 +17,7 @@ Template Name: Photo
         
 
     <!--Filtres formulaire html -->
-    <form action="#" method="POST">
+    <form action="#" method="POST" class="form">
 
 
                 <select name="categorie-photo">
@@ -26,7 +26,7 @@ Template Name: Photo
                         'taxonomy' => 'categorie-photo',
                     ]); 
                     ?>
-                    <option  value="1" >CATEGORIE</option>
+                    <option  value="1" >CATÉGORIES</option>
                     <?php
                     foreach ($categories as $categorie) : ?>
                         <option
@@ -41,7 +41,7 @@ Template Name: Photo
                     'taxonomy'   => 'format-photo',
                 ) );
                     ?>
-                    <option value="1">FORMAT</option>
+                    <option value="1">FORMATS</option>
                     <?php
                     foreach ($formats as $format) : ?>
                         <option
@@ -91,14 +91,17 @@ if(have_posts()):
              
           </div>
       </div>
-      <?php
+      <?php  
   endwhile;
+    ?>
+        <div class="div-btn-load">
+        <button id="load-more-posts" data-page="2">Charger plus</button>
+       </div>
+       <?php
 endif;
   ?>
   </div>
-  <div class="div-btn-load">
-    <button id="load-more-posts" data-page="2">Charger plus</button>
-   </div>
+ 
 </section>
 
 

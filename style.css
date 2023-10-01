@@ -444,3 +444,42 @@ body .lb-data .lb-close{
     background-color: #000;
     color: #fff;
 }
+
+.form select{
+    padding: 10px;
+    width: 250px;
+    font-family: Poppins;
+    border: solid 1px #B8BBC2;
+    border-radius: 8px;
+}
+.form{
+    height: 100%;
+}
+
+
+/*MOBILE RESPONSIVE*/
+@media screen and (max-width: 550px) {
+    .block-photo{
+        width: 80vw;
+        height: 80vw;
+    }
+    .banner h1{
+        font-size: 28px;
+        -webkit-text-stroke: 2px #fff;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        width: 50vw;
+    }
+    .form select{
+        width: 100%;
+    }
+   
+}
+@media screen and (max-width: 800px) {
+    .footer{
+        height: 100%;
+    }
+}
